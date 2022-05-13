@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 300;
+    /* font-family: cera-round-pro, "Helvetica Neue", "Helvetica", "Arial", sans-serif; */
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%);
+    /* background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%); */
+    /* background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/***** Bubbles *****/
+
+.bubbles {
+    display: flex;
+    position: absolute;
+    bottom: -60px;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.bubbles span {
+    transition: .5s;
+    height: 60px;
+    width: 60px;
+    background: rgba(225, 225, 255, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(5px);
+    animation: move 10s linear infinite;
+    border-radius: 5px;
+    aspect-ratio: 1/1;
+}
+
+@keyframes move {
+    100% {
+        transform: translateY(-90vh);
+    }
+}
+
+.bubbles span.one {
+    animation-delay: 2s;
+}
+
+.bubbles span.two {
+    animation-delay: 3.5s;
+}
+
+.bubbles span.three {
+    animation-delay: 0.2s;
+}
+
+.bubbles span.four {
+    animation-delay: 6s;
+}
+
+.bubbles span.five {
+    animation-delay: 7s;
+}
+
+.bubbles span.six {
+    animation-delay: 4s;
+}
+
+.bubbles span.seven {
+    animation-delay: 3s;
+}
+
+
+/***** End Bubbles *****/
+
+
+/***** Calculator *****/
+
+.cal-container {
+    margin: 0 10px;
+    width: 360px;
+    backdrop-filter: blur(5px);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    background: rgba(225, 225, 255, 0.1);
+    border-top: 1px solid rgba(225, 225, 255, 0.5);
+}
+
+.cal-container input[type="text"] {
+    width: 100%;
+    height: 100px;
+    margin: 0 3px;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 20px;
+    padding-right: 10px;
+    text-align: right;
+}
+
+.cal-container input[type="button"] {
+    height: 65px;
+    color: #fff;
+    width: calc(100% / 4 - 5px);
+    background: transparent;
+    border-radius: 12px;
+    margin-top: 15px;
+    outline: none;
+    border: .1px solid rgb(255, 255, 255, 0.15);
+    font-size: 18px;
+    cursor: pointer;
+    transition: all .3s ease;
+    /* box-shadow: 0 1.5px 10px rgba(0, 0, 0, 0.15); */
+}
+
+.cal-container input[type="button"]:hover {
+    background: rgba(225, 225, 255, 0.1);
+}
+
+
+/***** End Calculator *****/
